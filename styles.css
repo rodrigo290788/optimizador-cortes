@@ -1,0 +1,73 @@
+body {
+    /* background-image: url(https://www.canal12misiones.com/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-29-at-2.30.38-PM.jpeg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #canvas {
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: #ddd;
+  }
+
+  .inputs-pieza {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+    /* display: flex; */
+    align-items: center;
+
+  }
+
+  label {
+    /* display: block; */
+    margin-bottom: 5px;
+  }
+
+  input,
+  button {
+    padding: 10px;
+    font-size: 16px;
+
+  }
+
+  input {
+    width: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  .delete-icon {
+    cursor: pointer;
+    color: red;
+  }

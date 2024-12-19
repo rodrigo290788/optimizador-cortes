@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimizador de Cortes de MDF</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg-warning">
+    <nav class=" container py-2 d-flex">
+      <img src="./assets/tc.png" alt="" class="">
+    </nav>
+  </div>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Optimizador de Cortes</h1>
+
+    <div class="row">
+      <!-- Columna izquierda -->
+      <div class="col-lg-5">
+        <!-- Formulario de ingreso -->
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title fs-4">Agregar pieza</h5>
+            <form class="inputs-pieza d-flex flex-column">
+              <div class="w-100 d-flex justify-content-between">
+                <div class="mb-3">
+                  <label for="piece-width" class="form-label text-end" style="width: 100px;">Ancho (mm):</label>
+                  <input type="number" id="piece-width" class="form-control" min="1" style="width: 100px;">
+                </div>
+                <div class="mb-3">
+                  <label for="piece-height" class="form-label" style="width: 100px;">Alto (mm):</label>
+                  <input type="number" id="piece-height" class="form-control" min="1" style="width: 100px;">
+                </div>
+                <div class="mb-3 ">
+                  <label for="piece-quantity" class="form-label" style="width: 100px;">Cantidad:</label>
+                  <input type="number" id="piece-quantity" class="form-control" min="1" style="width: 100px;">
+                </div>
+              </div>
+              
+             <div class="w-100 d-flex justify-content-between">
+              <div class="form-check mb-3">
+                <input type="checkbox" id="allow-rotation" class="form-check-input">
+                <label for="allow-rotation" class="form-check-label">Permitir rotación</label>
+              </div>
+              <div class="d-flex">
+                <button type="button" id="add-piece" class="btn btn-primary me-2" style="width: 100px;">Agregar</button>
+              <button type="button" id="optimize-cuts" class="btn btn-success " style="width: 100px;">Optimizar</button>
+              </div>
+             </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tabla de piezas agregadas -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title fs-4">Piezas agregadas</h5>
+            <table id="pieces-table" class="table table-striped">
+              <thead class="table-dark">
+                <tr>
+                  
+                  <th>Medida (mm)</th>
+                  <th>Cantidad</th>
+                  <th>Rotación</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Las piezas se agregarán dinámicamente aquí -->
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col-lg-7">
+        <!-- Resultados -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title fs-4">Resultados</h5>
+            <canvas id="canvas" width="520" height="366" class="border border-secondary w-100"></canvas>
+            <p id="usage-percentage" class="mt-3">Porcentaje de uso: <strong>0%</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+  

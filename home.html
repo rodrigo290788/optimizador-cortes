@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimizador de Cortes de MDF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Optimizador de Cortes de MDF</h1>
+    <div class="inputs-pieza">
+      <div class="input-group">
+        <label for="piece-width">Ancho (mm):</label>
+        <input type="number" id="piece-width" min="1">
+      </div>
+      <div class="input-group">
+        <label for="piece-height">Alto (mm):</label>
+        <input type="number" id="piece-height" min="1">
+      </div>
+      <div class="input-group">
+        <label for="piece-quantity">Cantidad:</label>
+        <input type="number" id="piece-quantity" min="1">
+      </div>
+      <div class="input-group">
+        <label>
+          <input type="checkbox" id="allow-rotation"> Permitir rotación
+        </label>
+      </div>
+    </div>
+    <button id="add-piece">Agregar pieza</button>
+    <h2>Piezas agregadas</h2>
+    <table id="pieces-table">
+      <thead>
+        <tr>
+          <th>Ancho (mm)</th>
+          <th>Alto (mm)</th>
+          <th>Cantidad</th>
+          <th>Rotación</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Las piezas se agregarán dinámicamente aquí -->
+      </tbody>
+    </table>
+    <button id="optimize-cuts">Optimizar cortes</button>
+    <h2>Resultados</h2>
+    <canvas id="canvas" width="520" height="366"></canvas>
+    <p id="usage-percentage">Porcentaje de uso: 0%</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
